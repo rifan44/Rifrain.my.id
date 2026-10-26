@@ -5,6 +5,7 @@
   --paper: #081326;
   --paper-dark: #0e1e37;
   --ink: #edf5ff;
+  --inverse-ink: #f5f9ff;
   --muted: #91a6c4;
   --line: rgba(170, 201, 241, 0.18);
   --acid: #70d7ff;
@@ -21,6 +22,7 @@
   --paper: #f3f7fc;
   --paper-dark: #e3edf8;
   --ink: #101a2d;
+  --inverse-ink: #10233f;
   --muted: #61728b;
   --line: rgba(16, 26, 45, 0.16);
   --acid: #126bd5;
@@ -48,6 +50,8 @@ body {
   font-family: var(--sans);
   line-height: 1.5;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   transition: background 500ms ease, color 350ms ease;
 }
 
@@ -262,10 +266,10 @@ h2 {
 }
 
 h1 {
-  max-width: 700px;
+  max-width: 640px;
   margin-top: 25px;
-  font-size: clamp(58px, 8vw, 104px);
-  line-height: 0.91;
+  font-size: clamp(54px, 7vw, 88px);
+  line-height: 0.94;
 }
 
 h1 em,
@@ -831,7 +835,7 @@ h2 {
   min-height: 410px;
   padding: 28px;
   background: linear-gradient(145deg, #102d60, #050b18);
-  color: var(--paper);
+  color: var(--inverse-ink);
 }
 
 .project-placeholder .project-type {
@@ -847,7 +851,7 @@ h2 {
 
 .project-placeholder .project-description {
   margin-top: 30px;
-  color: rgba(245, 242, 235, 0.63);
+  color: rgba(224, 239, 255, 0.68);
 }
 
 .placeholder-number {
@@ -863,7 +867,7 @@ h2 {
   background:
     radial-gradient(circle at 85% 20%, rgba(40, 124, 255, 0.25), transparent 24rem),
     linear-gradient(135deg, #07162f, var(--deep));
-  color: var(--paper);
+  color: var(--inverse-ink);
 }
 
 .about-layout {
@@ -895,8 +899,8 @@ h2 {
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   padding-top: 21px;
-  border-top: 1px solid rgba(245, 242, 235, 0.24);
-  color: rgba(245, 242, 235, 0.78);
+  border-top: 1px solid rgba(190, 220, 255, 0.24);
+  color: rgba(220, 237, 255, 0.8);
   font-size: 13px;
   line-height: 1.9;
 }
@@ -1055,7 +1059,9 @@ body.has-pointer .cursor-glow {
   }
 
   h1 {
-    font-size: clamp(56px, 15vw, 88px);
+    max-width: 100%;
+    font-size: clamp(46px, 12.5vw, 72px);
+    line-height: 0.97;
   }
 
   .hero-art {
